@@ -4,7 +4,7 @@ import calculate.Coin;
 
 public class USD extends Coin {
 
-    static final double value = 3.52;
+    static private final double value = 3.52;
 
     @Override
     public Double getValue() {

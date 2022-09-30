@@ -4,7 +4,7 @@ import calculate.Coin;
 
 public class ILS extends Coin {
 
-    static final double value = 0.28;
+    static private final double value = 0.28;
 
     @Override
     public Double getValue() {
