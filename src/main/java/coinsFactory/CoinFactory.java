@@ -12,7 +12,6 @@ public class CoinFactory {
                 return new USD();
         }
 
-        //why?
         return null;
     }
 }
