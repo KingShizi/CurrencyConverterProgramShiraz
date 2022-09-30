@@ -2,6 +2,7 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -98,12 +99,12 @@ public class main2 {
         }
     }
 
-    //
+    //A method that writes all the results the user got to a txt file.
     public static void writeResultsToFile(ArrayList results) throws IOException {
 
         String filePath = "/Users/shirazelbaz/Desktop/1.txt";
         for (int i = 0; i < results.size(); i++) {
-            Files.writeString(Paths.get(filePath), results.get(i).toString());
+            Files.writeString(Paths.get(filePath), results.get(i).toString()+"\n", StandardOpenOption.APPEND);
         }
     }
 
