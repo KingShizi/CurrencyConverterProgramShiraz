@@ -1,3 +1,7 @@
+package main;
+
+import calculate.Coin;
+import coinsFactory.CoinFactory;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -91,7 +95,6 @@ public class main {
 
     //A method that prints all results.
     public static void printResults(ArrayList results){
-        System.out.println("Thanks for using our currency converter");
         System.out.println("The previous results are:");
 
         for (int i = 0; i < results.size(); i++) {

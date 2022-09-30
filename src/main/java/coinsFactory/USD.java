@@ -1,6 +1,10 @@
-public class ILS extends Coin{
+package coinsFactory;
 
-    static final double value = 0.28;
+import calculate.Coin;
+
+public class USD extends Coin {
+
+    static final double value = 3.52;
 
     @Override
     public Double getValue() {
