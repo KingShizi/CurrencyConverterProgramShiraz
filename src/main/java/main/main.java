@@ -17,10 +17,11 @@ public class main {
         //setting the arrayList of the values.
         ArrayList<Double> results = new ArrayList<Double>();
 
+        boolean finish = true;
         //Welcome screen
         System.out.println("Welcome to currency converter");
 
-        while (true) {
+        while (finish) {
 
         //try-catch to catch exeptions from user input on welcome screen
         try {
@@ -40,7 +41,7 @@ public class main {
 
                 //try-catch to catch exceptions from user input for converter.
                 try {
-                    System.out.println("Please enter an amount to convert");
+                    System.out.println("Please enter an amount in double you want to convert:");
                     Scanner scanner2 = new Scanner(System.in);
                     double amount = scanner2.nextDouble();
 
@@ -58,18 +59,28 @@ public class main {
                     results.add(value);
 
                     //Asking if the user want to start over.
-                        System.out.println("Would you like to start over? [y / n]" );
+                    while (finish){
+                        System.out.println("Would you like to start over? [y / n]");
                         Scanner scanner3 = new Scanner(System.in);
                         startOverAnswer = scanner3.next();
                         if (startOverAnswer.equalsIgnoreCase("y")) {
                             option = 0;
-                        } else {
+                            break;
+
+                        } else if (startOverAnswer.equalsIgnoreCase("n")) {
+
                             //End screen
                             System.out.println("Thank you for using our currency converter");
                             printResults(results);
                             writeResultsToFile(results);
+                            finish = false;
                             return;
+                        } else {
+                            //error and return to if you want to start over
+                            System.out.println("Wrong input, pls try again..");
                         }
+                    }
+
 
                 } catch (InputMismatchException | IOException e) {
                     System.out.println("amount should be only in numbers (double)");
@@ -84,7 +95,8 @@ public class main {
         }
     }
 
-    //A method to use in case the users input isn't 1/2
+
+    //A method to use in case the users input isn't 1 or 2.
     public static boolean isOptionValid(int option){
         if (option == 1 || option == 2){
             return true;
