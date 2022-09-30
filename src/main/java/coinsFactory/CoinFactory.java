@@ -1,7 +1,6 @@
 package coinsFactory;
 
 import calculate.Coin;
-import main.Coins;
 
 public class CoinFactory {
     public static Coin getCoinInstance(Coins coin) {

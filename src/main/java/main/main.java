@@ -2,6 +2,8 @@ package main;
 
 import calculate.Coin;
 import coinsFactory.CoinFactory;
+import coinsFactory.Coins;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
