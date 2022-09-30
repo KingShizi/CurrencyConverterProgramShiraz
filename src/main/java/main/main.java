@@ -18,10 +18,10 @@ public class main {
         //setting the arrayList of the values.
         ArrayList<Double> results = new ArrayList<Double>();
 
-        boolean finish = true;
         //Welcome screen
         System.out.println("Welcome to currency converter");
 
+        boolean finish = true;
         while (finish) {
 
         //try-catch to catch exeptions from user input on welcome screen
