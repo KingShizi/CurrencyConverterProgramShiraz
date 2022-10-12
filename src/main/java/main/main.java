@@ -1,8 +1,8 @@
 package main;
 
-import calculate.Coin;
-import coinsFactory.CoinFactory;
-import coinsFactory.Coins;
+import coin_utils.Coin;
+import coins_factory.CoinFactory;
+import coins_factory.Coins;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,6 +15,11 @@ import java.util.Scanner;
 public class main {
 
     public static void main(String[] args) {
+        calculate();
+
+    }
+
+    private static void calculate() {
         //setting the arrayList of the values.
         ArrayList<Double> results = new ArrayList<Double>();
 

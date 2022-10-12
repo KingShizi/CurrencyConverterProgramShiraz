@@ -1,4 +1,4 @@
-package coinsFactory;
+package coins_factory;
 
 public enum Coins {
 

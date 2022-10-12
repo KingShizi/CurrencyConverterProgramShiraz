@@ -1,6 +1,8 @@
-package coinsFactory;
+package coins_factory;
 
-import calculate.Coin;
+import coin_utils.Coin;
+import coin_utils.ILS;
+import coin_utils.USD;
 
 public class CoinFactory {
     public static Coin getCoinInstance(Coins coin) {

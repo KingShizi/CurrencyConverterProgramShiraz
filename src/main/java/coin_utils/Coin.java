@@ -1,10 +1,10 @@
-package calculate;
+package coin_utils;
 
 public abstract class Coin implements ICalculate {
 
 
     //An abstract method that will return the target.ILS and target.USD value when implemented.
-    public abstract Double getValue();
+     abstract Double getValue();
 
     @Override
     public double calculate(double input) {

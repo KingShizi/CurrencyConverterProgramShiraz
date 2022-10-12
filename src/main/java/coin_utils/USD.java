@@ -1,13 +1,11 @@
-package coinsFactory;
-
-import calculate.Coin;
+package coin_utils;
 
 public class USD extends Coin {
 
     static private final double value = 3.52;
 
     @Override
-    public Double getValue() {
+    protected Double getValue() {
         return value;
     }
 
